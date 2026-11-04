@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEDA — Luxury Handmade Kosa Silk Sarees | Bilaspur</title>
+<meta name="description" content="SEDA Luxury — Authentic handmade Kosa silk sarees from Bilaspur, Chhattisgarh. Timeless Indian elegance, handwoven heritage. Starting ₹2,000.">
+<meta property="og:title" content="SEDA — The Art of Timeless Indian Elegance"><meta property="og:description" content="Authentic handmade Kosa silk sarees. Luxury, heritage, craftsmanship.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+</head>
+<body>
+<div class="announce">✦ Complimentary shipping across India on orders above ₹5,000 &nbsp;·&nbsp; Use code <b>SEDA10</b> for 10% off &nbsp;·&nbsp; Handwoven in Bilaspur, Chhattisgarh ✦</div>
+<header class="header" id="header">
+  <button class="burger" onclick="toggleNav()" aria-label="Menu">☰</button>
+  <nav class="nav" id="nav">
+    <a href="#home" onclick="show('home')">Home</a><a href="#shop" onclick="show('shop')">Shop</a><a href="#about" onclick="show('about')">About SEDA</a><a href="#contact" onclick="show('contact')">Contact</a>
+  </nav>
+  <a class="logo" href="#home" onclick="show('home')">SEDA<span>LUXURY · KOSA SILK</span></a>
+  <div class="head-actions">
+    <button onclick="show('shop');setTimeout(()=>document.getElementById('q').focus(),100)" aria-label="Search">⌕</button>
+    <button onclick="show('account')" aria-label="Account">♡</button>
+    <button onclick="openCart()" aria-label="Cart">👜 <span id="cartCount" class="badge">0</span></button>
+    <button class="admin-link" onclick="show('admin')">Admin</button>
+  </div>
+</header>
+<main id="app">
+
+<!-- HOME -->
+<section id="view-home" class="view active">
+  <div class="hero">
+    <div class="hero-img"><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1400&q=80&auto=format&fit=crop" alt="Luxury Kosa silk saree" onerror="imgFallback(this)"></div>
+    <div class="hero-copy">
+      <p class="eyebrow">Handwoven · Bilaspur, Chhattisgarh</p>
+      <h1>The Art of Timeless<br><em>Indian Elegance</em></h1>
+      <p>Authentic handmade <b>Kosa silk</b> sarees — woven slowly by master artisans, in deep maroon, antique gold and ivory. Each drape carries centuries of heritage.</p>
+      <div class="btn-row"><button class="btn gold" onclick="show('shop')">Shop Now</button><button class="btn outline" onclick="show('shop')">Explore Collection</button></div>
+      <div class="hero-stats"><div><b>₹2,000</b><span>Starting Price</span></div><div><b>100%</b><span>Handloom Kosa</span></div><div><b>4.9★</b><span>2,400+ Reviews</span></div></div>
+    </div>
+  </div>
+
+  <div class="trust"><span>🚚 Pan-India Shipping</span><span>🛡️ Authentic Handloom Certified</span><span>↩️ 7-Day Easy Returns</span><span>💳 UPI · Cards · COD</span><span>🧾 GST Invoice Included</span></div>
+
+  <div class="section"><div class="sec-head"><p class="eyebrow">Curated For You</p><h2>Featured Sarees</h2><a href="#shop" onclick="show('shop')">View all →</a></div><div class="grid" id="featuredGrid"></div></div>
+
+  <div class="story">
+    <div class="story-img"><img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=1000&q=80&auto=format&fit=crop" onerror="imgFallback(this)" alt="Weaving craftsmanship"></div>
+    <div><p class="eyebrow">The House of SEDA</p><h2>Where Heritage<br><em>Becomes Heirloom</em></h2><p>Kosa silk — the 'Queen of Silks' — is spun from the cocoons of the Antheraea mylitta silkworm, feeding only on siali and arjun trees. In Bilaspur, our weavers take 15–20 days to complete a single saree on pit looms, using natural dyes and zari work passed down through generations.</p><ul class="checks"><li>✓ Pure Kosa silk, 5.5m + blouse piece</li><li>✓ Natural dyes &amp; real zari borders</li><li>✓ Silk Mark certified, GST-ready billing</li></ul><button class="btn dark" onclick="show('about')">Our Story</button></div>
+  </div>
+
+  <div class="section"><div class="sec-head"><p class="eyebrow">Loved Across India</p><h2>Best Selling</h2></div><div class="grid" id="bestGrid"></div></div>
+
+  <div class="section"><div class="sec-head"><p class="eyebrow">Just Arrived</p><h2>New Arrivals</h2></div><div class="grid" id="newGrid"></div></div>
+
+  <div class="craft"><h2>Traditional Craftsmanship</h2><p>From cocoon to couture — every SEDA saree is a 15-day labour of love.</p><div class="steps"><div><b>01</b><h3>Wild Kosa Cocoon</h3><p>Ethically harvested in Chhattisgarh forests.</p></div><div><b>02</b><h3>Hand Spinning</h3><p>Silk yarn spun by hand for a rich, textured sheen.</p></div><div><b>03</b><h3>Pit-Loom Weaving</h3><p>Master weavers, natural dyes, real zari.</p></div><div><b>04</b><h3>Finishing &amp; QC</h3><p>Checked, falls-pleated &amp; packed in signature SEDA box.</p></div></div></div>
+
+  <div class="section"><div class="sec-head"><p class="eyebrow">Words of Grace</p><h2>Customer Testimonials</h2></div><div class="testis" id="testis"></div></div>
+
+  <div class="section"><div class="sec-head"><p class="eyebrow">@seda.luxury</p><h2>Instagram Gallery</h2><a href="https://instagram.com/seda.luxury" target="_blank" rel="noopener">Follow us →</a></div><div class="insta" id="instaGrid"></div></div>
+
+  <div class="newsletter"><h2>Join the SEDA Circle</h2><p>Private previews, weaving stories &amp; 10% off your first order.</p><form onsubmit="subscribe(event)"><input id="nlEmail" type="email" required placeholder="Your email address"><button class="btn gold">Subscribe</button></form><p id="nlMsg" class="ok"></p></div>
+</section>
+
+<!-- SHOP -->
+<section id="view-shop" class="view">
+  <div class="page-hero"><p class="eyebrow">SEDA Collection</p><h1>Shop Kosa Silk Sarees</h1><p>Filter by colour, price and collection. Every saree ships in our signature ivory box.</p></div>
+  <div class="shop-layout">
+    <aside class="filters">
+      <input id="q" placeholder="⌕ Search sarees…" oninput="renderShop()">
+      <h4>Colour</h4><div id="colorFilters"></div>
+      <h4>Collection</h4><div id="catFilters"></div>
+      <h4>Max Price: <span id="priceLabel"></span></h4><input type="range" id="priceRange" min="2000" max="25000" value="25000" step="500" oninput="renderShop()">
+      <label><input type="checkbox" id="inStockOnly" onchange="renderShop()"> In stock only</label>
+      <label>Sort <select id="sort" onchange="renderShop()"><option value="pop">Most Popular</option><option value="new">Newest</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option></select></label>
+      <button class="btn outline sm" onclick="resetFilters()">Clear all</button>
+    </aside>
+    <div><p id="shopCount" class="muted"></p><div class="grid" id="shopGrid"></div></div>
+  </div>
+</section>
+
+<!-- PRODUCT -->
+<section id="view-product" class="view"></section>
+
+<!-- ABOUT -->
+<section id="view-about" class="view">
+  <div class="page-hero"><p class="eyebrow">About SEDA</p><h1>Elegance, Heritage,<br><em>Timeless Luxury</em></h1></div>
+  <div class="story"><div class="story-img"><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1000&q=80" onerror="imgFallback(this)"></div><div><h2>Born in Bilaspur, Worn with Pride</h2><p>SEDA was founded on a simple belief: true luxury is made by hand, slowly and honestly. We work directly with 40+ weaver families in Bilaspur, Chhattisgarh — no middlemen, fair wages, and a share of every saree funding weaver children's education.</p><p>Kosa silk has been woven in this region for over 2,000 years, mentioned in ancient texts and favoured by maharanis. Today, SEDA brings that legacy to modern wardrobes — festive, wedding and heirloom sarees that outlive trends.</p><div class="hero-stats"><div><b>40+</b><span>Weaver Families</span></div><div><b>2000+</b><span>Years of Craft</span></div><div><b>15 Days</b><span>Per Saree</span></div></div></div></div>
+  <div class="craft"><h2>Our Promise</h2><div class="steps"><div><b>Authentic</b><h3>Pure Handloom</h3><p>Silk Mark certified Kosa, verified at source.</p></div><div><b>Fair</b><h3>Fair Trade</h3><p>Direct partnerships, transparent pricing from ₹2,000.</p></div><div><b>Lasting</b><h3>Heirloom Quality</h3><p>Sarees designed to be passed down, not worn once.</p></div></div></div>
+</section>
+
+<!-- CONTACT -->
+<section id="view-contact" class="view">
+  <div class="page-hero"><p class="eyebrow">We Would Love to Hear From You</p><h1>Contact SEDA</h1></div>
+  <div class="contact-grid">
+    <div class="card"><h3>Visit / Write</h3><p>📍 SEDA Luxury, Bilaspur, Chhattisgarh, India<br>💬 WhatsApp: <a href="https://wa.me/919999999999?text=Hello%20SEDA%2C%20I%20want%20to%20enquire%20about%20a%20Kosa%20saree" target="_blank">+91 99999 99999</a><br>📸 Instagram: <a href="https://instagram.com/seda.luxury" target="_blank">@seda.luxury</a><br>✉️ care@seda.in · Mon–Sat, 10am–7pm</p><a class="btn gold" href="https://wa.me/919999999999?text=Hello%20SEDA" target="_blank">Chat on WhatsApp</a></div>
+    <form class="card" onsubmit="contactSend(event)"><h3>Send a Message</h3><input required placeholder="Your name"><input required type="email" placeholder="Email"><textarea required placeholder="How can we help?"></textarea><button class="btn dark">Send Message</button><p id="contactMsg" class="ok"></p></form>
+  </div>
+</section>
+
+<!-- CHECKOUT -->
+<section id="view-checkout" class="view"><div class="page-hero"><p class="eyebrow">Secure Checkout</p><h1>Complete Your Order</h1></div><div id="checkoutWrap" class="checkout"></div></section>
+
+<!-- ACCOUNT -->
+<section id="view-account" class="view"><div class="page-hero"><p class="eyebrow">My SEDA</p><h1>Account</h1></div><div id="accountWrap" class="account"></div></section>
+
+<!-- ADMIN -->
+<section id="view-admin" class="view"><div class="page-hero"><p class="eyebrow">SEDA Admin</p><h1>Dashboard</h1><p>Demo login — email: <b>admin@seda.in</b> · password: <b>seda123</b></p></div><div id="adminWrap"></div></section>
+
+</main>
+
+<footer>
+  <div class="foot-grid"><div><a class="logo light">SEDA<span>LUXURY · KOSA SILK</span></a><p>Authentic handmade Kosa silk sarees from Bilaspur, Chhattisgarh.</p><p>📸 <a href="https://instagram.com/seda.luxury" target="_blank">@seda.luxury</a></p></div>
+  <div><h4>Shop</h4><a href="#shop" onclick="show('shop')">All Sarees</a><a href="#shop" onclick="show('shop')">Festive</a><a href="#shop" onclick="show('shop')">Wedding</a><a href="#shop" onclick="show('shop')">Everyday Luxury</a></div>
+  <div><h4>Care</h4><a href="#about" onclick="show('about')">Our Story</a><a href="#contact" onclick="show('contact')">Contact</a><a href="#" onclick="show('account')">Track Order</a><a href="#" onclick="show('account')">Wishlist</a></div>
+  <div><h4>Visit Us</h4><p>Bilaspur, Chhattisgarh, India<br>care@seda.in<br>+91 99999 99999</p></div></div>
+  <p class="copy">© 2026 SEDA Luxury · GST-ready invoicing · UPI, Cards &amp; COD accepted · Prices include GST</p>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay" onclick="closeAll()"></div>
+<aside class="drawer" id="cartDrawer"><div class="drawer-head"><h3>Your Bag <span id="cartCount2"></span></h3><button onclick="closeAll()">✕</button></div><div id="cartItems"></div><div class="drawer-foot"><div class="coupon"><input id="coupon" placeholder="Coupon (try SEDA10)"><button onclick="applyCoupon()">Apply</button></div><p id="couponMsg"></p><div class="totals" id="cartTotals"></div><button class="btn gold wide" onclick="closeAll();show('checkout')">Proceed to Checkout</button><button class="btn outline wide" onclick="closeAll();show('shop')">Continue Shopping</button></div></aside>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal" id="qvModal"><div class="modal-box" id="qvBox"></div></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body></html>
